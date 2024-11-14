@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi step form</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <form id="event-form">
+            <input type="radio" name="step" id="step-1" class="step-radio" checked>
+            <div class="form-step">
+                <h2>Step 1: Personal Information</h2>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter Your Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="form-navigation">
+                    <label for="step-2" class="next-btn">Next</label>
+                </div>
+            </div>
+
+            <input type="radio" name="step" id="step-2" class="step-radio">
+            <div class="form-step">
+                <h2>Event Preference</h2>
+                <div class="form-group">
+                    <label for="event-type">Event Type</label>
+                    <select name="event-type" id="event-type" required>
+                        <option value="">Select Event Type</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="seminar">Seminar</option>
+                        <option value="Conference">Conference</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Preferred Date</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+                <div class="form-navigation">
+                    <label for="step-1" class="prev-btn">Back</label>
+                    <label for="step-3" class="next-btn">Next</label>
+                </div>
+            </div>
+
+            <input type="radio" name="step" id="step-3" class="step-radio">
+            <div class="form-step">
+                <h3>Payment Information</h3>
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter Your Card Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expirey-date">Expire Date</label>
+                    <input type="month" id="expirey-date" name="expirey-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                </div>
+                <div class="form-navigation">
+                    <label for="step-2" class="prev-btn">Back</label>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
